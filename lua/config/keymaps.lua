@@ -12,6 +12,13 @@ end, { desc = "Open terminal below" })
 
 map("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 
+-- Lock terminal windows to their terminal buffer
+vim.api.nvim_create_autocmd("TermOpen", {
+	callback = function()
+		vim.wo.winfixbuf = true
+	end,
+})
+
 -- Window navigation with Ctrl + h/j/k/l (normal and terminal mode)
 map({ "n", "t" }, "<C-h>", [[<C-\><C-n><C-w>h]], { desc = "Window left" })
 map({ "n", "t" }, "<C-j>", [[<C-\><C-n><C-w>j]], { desc = "Window down" })
