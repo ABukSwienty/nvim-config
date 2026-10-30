@@ -4,7 +4,7 @@ vim.pack.add({
 })
 
 require('blink.cmp').setup({
-  keymap = { preset = 'default' },
+  keymap = { preset = 'super-tab' },  -- <Tab> accepts, <S-Tab> goes back in snippets
 
   completion = {
     documentation = { auto_show = true, auto_show_delay_ms = 300 },  -- docs next to the menu
