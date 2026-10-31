@@ -14,6 +14,19 @@ require('blink.cmp').setup({
 
   sources = {
     default = { 'lsp', 'path', 'snippets', 'buffer' },
+    providers = {
+      lsp = {
+        -- Rank TypeScript suggestions above Tailwind classes
+        transform_items = function(_, items)
+          for _, item in ipairs(items) do
+            if item.client_name == 'ts_ls' then
+              item.score_offset = (item.score_offset or 0) + 10
+            end
+          end
+          return items
+        end,
+      },
+    },
   },
 
   fuzzy = { implementation = 'prefer_rust_with_warning' },
