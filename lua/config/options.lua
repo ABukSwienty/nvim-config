@@ -6,6 +6,10 @@ opt.relativenumber = true
 opt.cursorline = true
 opt.signcolumn = 'yes'
 opt.scrolloff = 8
+opt.breakindent = true     -- wrapped lines keep the line's indent (long Tailwind classes)
+opt.breakindentopt = 'shift:2' -- ...plus 2 extra columns so continuations stand out
+opt.linebreak = true       -- wrap at word boundaries, not mid-class
+opt.showbreak = '↪ '
 
 -- Editing
 opt.expandtab = true

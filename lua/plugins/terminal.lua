@@ -31,9 +31,8 @@ require('toggleterm').setup({
 
 local map = vim.keymap.set
 
--- Main terminal (bottom): Space t t in normal mode, Alt-t from anywhere
+-- Main terminal (bottom): Space t t (from terminal mode, Esc Esc first)
 map('n', '<leader>tt', '<cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
-map({ 'n', 't' }, '<M-t>', '<cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 
 -- Floating terminal (never replaces a window)
 map('n', '<leader>tf', '<cmd>ToggleTerm direction=float<CR>', { desc = 'Floating terminal' })
