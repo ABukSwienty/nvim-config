@@ -14,10 +14,25 @@ vim.lsp.config('lua_ls', {
   },
 })
 
+vim.lsp.config('tailwindcss', {
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        -- complete classes inside clsx()/cn()/cva() calls, not just class attributes
+        classRegex = {
+          { 'clsx\\(([^)]*)\\)', "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+          { 'cn\\(([^)]*)\\)', "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+          { 'cva\\(([^)]*)\\)', "[\"'`]([^\"'`]*).*?[\"'`]" },
+        },
+      },
+    },
+  },
+})
+
 -- Install servers and enable them automatically
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { 'ts_ls', 'eslint', 'gopls', 'html', 'cssls', 'jsonls', 'lua_ls' },
+  ensure_installed = { 'ts_ls', 'eslint', 'gopls', 'html', 'cssls', 'jsonls', 'lua_ls', 'tailwindcss' },
   automatic_enable = true,
 })
 
