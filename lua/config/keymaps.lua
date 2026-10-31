@@ -5,11 +5,6 @@ map("n", "<leader>w", "<cmd>write<CR>", { desc = "Save file" })
 map("n", "<leader>q", "<cmd>quit<CR>", { desc = "Quit window" })
 
 -- Terminal
-map("n", "<leader>tt", function()
-	vim.cmd("botright split | resize 15 | terminal")
-	vim.cmd("startinsert")
-end, { desc = "Open terminal below" })
-
 map("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 
 -- Window navigation with Ctrl + h/j/k/l (normal and terminal mode)
