@@ -77,6 +77,11 @@
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"
+    },
+    "ts-comments.nvim": {
+      "rev": "79e4337e4231ff8ca33dab85162b5ee8e78f22ce",
+      "src": "https://github.com/folke/ts-comments.nvim",
+      "version": "1.0.0 - 2.0.0"
     }
   }
 }
