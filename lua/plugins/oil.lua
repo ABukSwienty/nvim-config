@@ -32,6 +32,14 @@ require('oil').setup({
     border = 'rounded',
   },
 
+  -- Splits match Telescope (Ctrl-v / Ctrl-x); freeing Ctrl-h restores window-left in oil
+  keymaps = {
+    ['<C-v>'] = { 'actions.select', opts = { vertical = true } },
+    ['<C-x>'] = { 'actions.select', opts = { horizontal = true } },
+    ['<C-s>'] = false,
+    ['<C-h>'] = false,
+  },
+
   preview_win = {
     update_on_cursor_moved = true,        -- preview follows the cursor
   },

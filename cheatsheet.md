@@ -24,7 +24,7 @@ Leader = Space. `Space f k` searches all keymaps.
 | oil: edit text + `:w`               | Rename, create (`name/` = dir), delete (`dd`), move |
 | oil: `` ` ``                        | Make shown dir the cwd                              |
 | oil: `o` name `Esc` `:w`            | New file (`name/` = dir, `dir/file.ts` = both)      |
-| oil: `Ctrl-s` / `Ctrl-h` / `Ctrl-t` | Open in right split / split below / new tab         |
+| oil: `Ctrl-v` / `Ctrl-x` / `Ctrl-t` | Open in right split / split below / new tab         |
 | oil: `Ctrl-p`                       | Preview file                                        |
 | oil: `g.` / `g?`                    | Toggle hidden files / show all keys                 |
 | `Space ?`                           | Open this cheat sheet (`q` saves and closes)        |
