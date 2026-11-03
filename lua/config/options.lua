@@ -10,6 +10,7 @@ opt.breakindent = true     -- wrapped lines keep the line's indent (long Tailwin
 opt.breakindentopt = 'shift:2' -- ...plus 2 extra columns so continuations stand out
 opt.linebreak = true       -- wrap at word boundaries, not mid-class
 opt.showbreak = '↪ '
+opt.winborder = 'rounded'  -- default border for floats: hover, signature help, diagnostics
 
 -- Editing
 opt.expandtab = true
