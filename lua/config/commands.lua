@@ -1,7 +1,17 @@
 local command = vim.api.nvim_create_user_command
 
--- Runs the LSP's organize-imports action; apply = true skips the picker when there's one match
+-- ts_ls needs its own command; other servers use the standard code action
+-- (apply = true skips the picker when there's one match)
 command("OrganizeImports", function()
+  local ts = vim.lsp.get_clients({ bufnr = 0, name = "ts_ls" })[1]
+  if ts then
+    ts:exec_cmd({
+      title = "Organize imports",
+      command = "_typescript.organizeImports",
+      arguments = { vim.api.nvim_buf_get_name(0) },
+    })
+    return
+  end
   vim.lsp.buf.code_action({
     context = { only = { "source.organizeImports" }, diagnostics = {} },
     apply = true,
