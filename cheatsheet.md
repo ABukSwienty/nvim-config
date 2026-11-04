@@ -176,10 +176,20 @@ Leader = Space. `Space f k` searches all keymaps.
 | `Space t f`   | Toggle floating terminal   |
 | `Space t c`   | Toggle Claude Code (right) |
 | `Space t a`   | Toggle all terminals       |
-| `:TermSelect` | Pick a terminal            |
 | `Esc Esc`     | Leave terminal mode        |
 | `Ctrl-d`      | Exit shell                 |
 | `:!cmd`       | Run one shell command      |
+
+## Claude Code
+
+| Keys                | Action                                   |
+| ------------------- | ---------------------------------------- |
+| `Space t c`         | Toggle Claude Code (keeps session)       |
+| `Space a s`         | Send selection to Claude (visual mode)   |
+| `Space a b`         | Add current buffer to Claude's context   |
+| `Space a a`         | Accept Claude's proposed change (diff)   |
+| `Space a d`         | Reject Claude's proposed change (diff)   |
+| `:ClaudeCodeStatus` | Check Claude is connected to Neovim      |
 
 ## Maintenance
 
