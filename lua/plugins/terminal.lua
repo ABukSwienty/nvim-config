@@ -21,7 +21,7 @@ require('toggleterm').setup({
   -- runs on every open (TermOpen only fires once), so re-opened splits don't
   -- inherit number/sign columns and cursorline from the previous window
   on_open = function(term)
-    local wo = vim.wo[term.window]
+    local wo = vim.wo[term.window][0]   -- [0] = local only; plain vim.wo[win] also changes the global value
     wo.number = false
     wo.relativenumber = false
     wo.signcolumn = 'no'
@@ -50,7 +50,7 @@ local function toggle_claude()
   vim.cmd('botright vsplit')           -- full-height column on the far right
   claude_win = vim.api.nvim_get_current_win()
   vim.api.nvim_win_set_width(claude_win, math.floor(vim.o.columns * 0.4))
-  local wo = vim.wo[claude_win]        -- vsplit copies the previous window's gutter options
+  local wo = vim.wo[claude_win][0]     -- vsplit copies the previous window's gutter options; [0] = local only
   wo.number, wo.relativenumber, wo.signcolumn, wo.cursorline = false, false, 'no', false
   if claude_buf and vim.api.nvim_buf_is_valid(claude_buf) then
     vim.api.nvim_win_set_buf(claude_win, claude_buf)
