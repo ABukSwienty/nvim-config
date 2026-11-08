@@ -38,6 +38,11 @@
       "rev": "03eb1f0062a2cee5314d1ac3939246e4bb21352e",
       "src": "https://github.com/nvim-mini/mini.pairs"
     },
+    "nvim-hlslens": {
+      "rev": "e22f8448b571b56d6140427e27e02406bcf4e059",
+      "src": "https://github.com/kevinhwang91/nvim-hlslens",
+      "version": "1.0.0 - 2.0.0"
+    },
     "nvim-lspconfig": {
       "rev": "4b2b045b8ceb035f5c8bc9cab19b95706bfa6a19",
       "src": "https://github.com/neovim/nvim-lspconfig"
