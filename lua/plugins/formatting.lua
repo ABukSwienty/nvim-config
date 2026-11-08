@@ -17,6 +17,7 @@ require('conform').setup({
     html            = prettier,
     yaml            = prettier,
     markdown        = prettier,
+    astro           = prettier,  -- needs prettier-plugin-astro in the project
     go              = { 'goimports' },
     lua             = { 'stylua' },
   },
