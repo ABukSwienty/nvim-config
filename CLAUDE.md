@@ -12,12 +12,12 @@ Personal Neovim config. Plugins are managed with the built-in `vim.pack` (Neovim
 
 ## Plugins
 
-| File | Plugins |
-| --- | --- |
-| `completion.lua` | blink.cmp (`default` preset: `<C-y>` accepts), friendly-snippets |
-| `lsp.lua` | nvim-lspconfig, mason, mason-lspconfig — servers in `ensure_installed`, per-server settings via `vim.lsp.config()` before enabling |
-| `formatting.lua` | conform.nvim — prettierd/prettier for web files, goimports for Go |
-| `telescope.lua`, `treesitter.lua`, `git.lua`, `statusline.lua`, `colorscheme.lua` | as named |
+| File                                                                              | Plugins                                                                                                                            |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `completion.lua`                                                                  | blink.cmp (`default` preset: `<C-y>` accepts), friendly-snippets                                                                   |
+| `lsp.lua`                                                                         | nvim-lspconfig, mason, mason-lspconfig — servers in `ensure_installed`, per-server settings via `vim.lsp.config()` before enabling |
+| `formatting.lua`                                                                  | conform.nvim — prettierd/prettier for web files, goimports for Go                                                                  |
+| `telescope.lua`, `treesitter.lua`, `git.lua`, `statusline.lua`, `colorscheme.lua` | as named                                                                                                                           |
 
 ## Conventions
 

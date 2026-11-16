@@ -32,7 +32,7 @@ vim.lsp.config('tailwindcss', {
 -- Install servers and enable them automatically
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { 'ts_ls', 'eslint', 'gopls', 'html', 'cssls', 'jsonls', 'lua_ls', 'tailwindcss', 'astro' },
+  ensure_installed = { 'ts_ls', 'eslint', 'gopls', 'html', 'cssls', 'jsonls', 'lua_ls', 'tailwindcss', 'astro', 'prismals' },
   automatic_enable = true,
 })
 
