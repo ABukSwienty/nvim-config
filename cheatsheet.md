@@ -96,6 +96,27 @@ Leader = Space. `Space f k` searches all keymaps.
 | `Ctrl-v` `j..` `d`             | Delete a rectangular block                                              |
 | Example                        | `:%s/ className={styles\..\{-}}//g` = remove all `className={styles.x}` |
 
+## Multi-cursor (multicursor.nvim)
+
+| Keys                          | Action                                                  |
+| ----------------------------- | ------------------------------------------------------- |
+| `Up` / `Down`                 | Add cursor above / below                                |
+| `Space Up` / `Space Down`     | Skip line above / below                                 |
+| `Space n` / `Space N`         | Add cursor at next / previous match of word / selection |
+| `Space s` / `Space S`         | Skip next / previous match                              |
+| `Space A`                     | Add cursors at all matches                              |
+| `Ctrl-click`                  | Add / remove cursor                                     |
+| `ga` + motion                 | Cursor on each line of motion (`gaip` = paragraph)      |
+| `I` / `A` (visual)            | Insert / append on each selected line                   |
+| `S` / `M` (visual)            | Split selection by regex / cursor at each regex match   |
+| `Space t` / `T` (visual)      | Rotate selected text between cursors                    |
+| `Space a`                     | Align cursors into one column                           |
+| `Ctrl-q`                      | Disable cursors (move main alone) / re-enable           |
+| `Left` / `Right`              | Jump to previous / next cursor (while cursors exist)    |
+| `Space x`                     | Delete current cursor (while cursors exist)             |
+| `Esc`                         | Clear cursors (re-enables them if disabled)             |
+| `Space g v`                   | Restore cleared cursors                                 |
+
 ## LSP
 
 | Keys                         | Action                                        |
