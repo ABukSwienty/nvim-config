@@ -98,24 +98,24 @@ Leader = Space. `Space f k` searches all keymaps.
 
 ## Multi-cursor (multicursor.nvim)
 
-| Keys                          | Action                                                  |
-| ----------------------------- | ------------------------------------------------------- |
-| `Up` / `Down`                 | Add cursor above / below                                |
-| `Space Up` / `Space Down`     | Skip line above / below                                 |
-| `Space n` / `Space N`         | Add cursor at next / previous match of word / selection |
-| `Space s` / `Space S`         | Skip next / previous match                              |
-| `Space A`                     | Add cursors at all matches                              |
-| `Ctrl-click`                  | Add / remove cursor                                     |
-| `ga` + motion                 | Cursor on each line of motion (`gaip` = paragraph)      |
-| `I` / `A` (visual)            | Insert / append on each selected line                   |
-| `S` / `M` (visual)            | Split selection by regex / cursor at each regex match   |
-| `Space t` / `T` (visual)      | Rotate selected text between cursors                    |
-| `Space a`                     | Align cursors into one column                           |
-| `Ctrl-q`                      | Disable cursors (move main alone) / re-enable           |
-| `Left` / `Right`              | Jump to previous / next cursor (while cursors exist)    |
-| `Space x`                     | Delete current cursor (while cursors exist)             |
-| `Esc`                         | Clear cursors (re-enables them if disabled)             |
-| `Space g v`                   | Restore cleared cursors                                 |
+| Keys                      | Action                                                  |
+| ------------------------- | ------------------------------------------------------- |
+| `Up` / `Down`             | Add cursor above / below                                |
+| `Space Up` / `Space Down` | Skip line above / below                                 |
+| `Space n` / `Space N`     | Add cursor at next / previous match of word / selection |
+| `Space s` / `Space S`     | Skip next / previous match                              |
+| `Space A`                 | Add cursors at all matches                              |
+| `Ctrl-click`              | Add / remove cursor                                     |
+| `ga` + motion             | Cursor on each line of motion (`gaip` = paragraph)      |
+| `I` / `A` (visual)        | Insert / append on each selected line                   |
+| `S` / `M` (visual)        | Split selection by regex / cursor at each regex match   |
+| `Space t` / `T` (visual)  | Rotate selected text between cursors                    |
+| `Space a`                 | Align cursors into one column                           |
+| `Ctrl-q`                  | Disable cursors (move main alone) / re-enable           |
+| `Left` / `Right`          | Jump to previous / next cursor (while cursors exist)    |
+| `Space x`                 | Delete current cursor (while cursors exist)             |
+| `Esc`                     | Clear cursors (re-enables them if disabled)             |
+| `Space g v`               | Restore cleared cursors                                 |
 
 ## LSP
 
@@ -163,6 +163,28 @@ Leader = Space. `Space f k` searches all keymaps.
 | `Space h d`               | Diff file                              |
 | `dih` / `vih`             | Delete / select hunk (text object)     |
 
+## Debugging (nvim-dap)
+
+TS/JS runs under Node with `--experimental-transform-types` (enums work). Values show inline while paused.
+
+| Keys                      | Action                                                         |
+| ------------------------- | -------------------------------------------------------------- |
+| `Space d s`               | Start (step through / run / piped input); continue if paused   |
+| `Space d b` / `Space d B` | Toggle breakpoint / conditional breakpoint                     |
+| `Space d c`               | Run to cursor (no breakpoint needed)                           |
+| `Space d h`               | Hover value under cursor (expand objects)                      |
+| `Space d v`               | Toggle debug panel (scopes, stack, REPL; opens automatically)  |
+| `Space d l` / `Space d q` | Rerun last / stop (or close output pane once finished)         |
+| `Space d t`               | Debug Go test under cursor                                     |
+| `Right` / `Left`          | Step over / continue (only while debugging)                    |
+| `Down` / `Up`             | Step into / step out (only while debugging)                    |
+| Piped input               | `Space d b` on first line → `Space d s` → piped → input file   |
+| Program output            | Terminal pane at the bottom; stays open after the program ends |
+| Get inside a function     | `Down` on the line that calls it (`Right` runs it in one go)   |
+| Skip setup                | `Space d b` in the function → `Space d s` → run                |
+| Watch a loop              | Breakpoint in the loop → `Left` pauses once per iteration      |
+| Went in too deep          | `Up` returns to the line that called the function              |
+
 ## Windows
 
 | Keys                     | Action                                     |
@@ -203,14 +225,14 @@ Leader = Space. `Space f k` searches all keymaps.
 
 ## Claude Code
 
-| Keys                | Action                                   |
-| ------------------- | ---------------------------------------- |
-| `Space t c`         | Toggle Claude Code (keeps session)       |
-| `Space a s`         | Send selection to Claude (visual mode)   |
-| `Space a b`         | Add current buffer to Claude's context   |
-| `Space a a`         | Accept Claude's proposed change (diff)   |
-| `Space a d`         | Reject Claude's proposed change (diff)   |
-| `:ClaudeCodeStatus` | Check Claude is connected to Neovim      |
+| Keys                | Action                                 |
+| ------------------- | -------------------------------------- |
+| `Space t c`         | Toggle Claude Code (keeps session)     |
+| `Space a s`         | Send selection to Claude (visual mode) |
+| `Space a b`         | Add current buffer to Claude's context |
+| `Space a a`         | Accept Claude's proposed change (diff) |
+| `Space a d`         | Reject Claude's proposed change (diff) |
+| `:ClaudeCodeStatus` | Check Claude is connected to Neovim    |
 
 ## Maintenance
 
