@@ -18,13 +18,13 @@ require('dashboard').setup({
       { desc = ' Quit', group = 'Label', key = 'q', action = 'qa' },
     },
 
-    -- Recent projects: selecting one makes it the cwd and opens the file finder there
+    -- Recent projects: selecting one makes it the cwd and opens oil at the project root
     project = {
       enable = true,
       limit = 8,
       action = function(path)
         vim.cmd.cd(path)
-        require('telescope.builtin').find_files({ cwd = path })
+        require('oil').open(path)
       end,
     },
 
